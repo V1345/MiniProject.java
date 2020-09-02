@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+class Employee
+{
+	String name;
+	int eNo;
+	
+	Employee(String name , int eNo)
+	{
+		this.name = name;
+		this.eNo = eNo;
+	}
+	void display()
+	{
+		System.out.println(this.name);
+		System.out.println(this.eNo);
+	}
+	void temp(int temp)
+	{
+		if(temp > 100)
+		{
+			System.out.println("Symptoms of COVID. Entry prohibited");
+		}
+		else
+		{
+			System.out.println("You are welcome!");
+		}
+	}
+}
+class Visitor
+{
+	String name;
+	int appointmentNo;
+Visitor (String name , int appointmentNo)
+{
+	this.name = name;
+	this.appointmentNo = appointmentNo;
+}
+void display()
+{
+	System.out.println(this.name);
+	System.out.println(this.appointmentNo);
+}
+void temp(int temp)
+{
+	if(temp > 100)
+	{
+		System.out.println("Symptoms of COVID. Entry prohibited");
+	}
+	else
+	{
+		System.out.println("You are welcome!");
+	}
+}
+}
+public class Company {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("If employee , Enter name: ");
+		String st = s.next();
+		System.out.println("Enter employee no:");
+		int n = s.nextInt();
+		System.out.println("If visitor , Enter name:");
+		String str = s.next();
+		System.out.println("Enter appointment no:");
+		int a = s.nextInt();
+		String userInput = new String();
+		if(userInput == "E")
+		{
+			Employee person = new Employee("A" , 123);
+			person.display();
+			person.temp(98);
+		}
+		else
+		{
+			Visitor person2 = new Visitor("B" , 22);
+			person2.display();
+			person2.temp(101);
+		}
+
+	}
+
+}
